@@ -1,0 +1,132 @@
+*{
+    padding: 0px;
+    margin: 0px;
+
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.box{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#222;
+}
+
+.box ul{
+    display: flex;
+    position:relative;
+    transform-style: preserve-3d;
+    transform: rotate(-25deg) skew(25deg);
+   
+}
+
+.box ul li{
+    width: 50px;
+    height: 50px;
+    color:#fff;
+    position:relative;
+    margin-left:20px;
+}
+
+.box ul li:after{
+    content: '';
+    position: absolute;
+    left:-10px;
+    top:0px;
+    width: 10px;
+    height: 100%;
+    background-color: #fff;
+    transform-origin: right;
+    transform: skewY(-41deg);
+    background-color:gray;
+
+}
+
+.box ul li:before{
+    content: '';
+    position: absolute;
+    bottom:-10px;
+    left: -1px;
+    width: 100%;
+    height:10px;
+    background-color: #fff;
+    transform-origin: top;
+    background-color:gray;
+    transform: skewX(-43deg);
+}
+
+.box ul li span{
+    color:rgba(255,255,255,.5);
+    background-color:gray;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:100%;
+    position:absolute;
+    top:0px;
+    left:0px;
+    font-size: 30px;
+    transition: .5s;
+}
+
+.box ul li:hover span{
+    z-index: 100;
+    color: #fff;
+}
+
+
+.box ul li:hover span:nth-child(5){
+    transform: translate(40px, -40px);
+    opacity: 1;
+}
+
+.box ul li:hover span:nth-child(4){
+    transform: translate(30px, -30px);
+    opacity: .8;
+}
+
+.box ul li:hover span:nth-child(3){
+    transform: translate(20px, -20px);
+    opacity: .6;
+}
+
+.box ul li:hover span:nth-child(2){
+    transform: translate(10px, -10px);
+    opacity:.4;
+}
+
+.box ul li:hover span:nth-child(1){
+    transform: translate(0px, 0px);
+    opacity:.2;
+}
+
+.box ul li:nth-child(1):hover span{
+    background-color:#4966ab;
+}
+
+.box ul li:nth-child(2):hover span{
+    background-color: #4f851c;
+}
+
+.box ul li:nth-child(3):hover span{
+    background-color:#3878a0;
+}
+
+.box ul li:nth-child(4):hover span{
+    background-color:#316394;
+}
+
+.box ul li:nth-child(5):hover span{
+    background-color:#ec984c;
+}
